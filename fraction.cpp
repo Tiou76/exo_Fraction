@@ -12,7 +12,7 @@ Fraction::Fraction(int numerateur, int denominateur)
 	if(denominateur == 0)
 		throw std::runtime_error ("division par zero");
 
-	m_denominateur = denominateur
+	m_denominateur = denominateur;
 	m_numerateur = numerateur;
 }
 
