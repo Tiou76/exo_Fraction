@@ -14,15 +14,17 @@ class Fraction
 		void simplifier();
 		double get_decimal();
 
+		Fraction operator = (Fraction const & a);
+
+
 	private:
 		int m_denominateur, m_numerateur;
 
-}
+};
 
 Fraction operator + (Fraction const & a, Fraction const & b);
 Fraction operator - (Fraction const & a, Fraction const & b);
 Fraction operator * (Fraction const & a, Fraction const & b);
 Fraction operator / (Fraction const & a, Fraction const & b);
-Fraction operator = (Fraction const & a);
 
  #endif

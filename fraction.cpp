@@ -84,7 +84,7 @@ double Fraction::get_decimal()
 	return m_numerateur / m_denominateur;
 }
 
-Fraction operator+(Fraction const & a, Fraction const & b)
+Fraction operator +(Fraction const & a, Fraction const & b)
 {
 	return Fraction (
 		(a.get_numerateur() * b.get_denominateur()) + (b.get_numerateur() * a.get_denominateur()),
@@ -92,7 +92,7 @@ Fraction operator+(Fraction const & a, Fraction const & b)
 		);
 }
 
-Fraction operator-(Fraction const & a, Fraction const & b)
+Fraction operator -(Fraction const & a, Fraction const & b)
 {
 	return Fraction (
 		(a.get_numerateur() * b.get_denominateur()) - (b.get_numerateur() * a.get_denominateur()),
@@ -100,7 +100,7 @@ Fraction operator-(Fraction const & a, Fraction const & b)
 	 	);
 }
 
-Fraction operator*(Fraction const & a, Fraction const & b)
+Fraction operator *(Fraction const & a, Fraction const & b)
 {
 	return Fraction (
 		a.get_numerateur() * b.get_numerateur(),
@@ -108,7 +108,7 @@ Fraction operator*(Fraction const & a, Fraction const & b)
 		);
 }
 
-Fraction operator/(Fraction const & a, Fraction const & b)
+Fraction operator /(Fraction const & a, Fraction const & b)
 {
 	return Fraction(
 		a.get_numerateur() * b.get_denominateur(),
@@ -116,7 +116,7 @@ Fraction operator/(Fraction const & a, Fraction const & b)
 	);
 }
 
-Fraction operator = (Fraction & a)
+Fraction Fraction::operator =(Fraction const & a)
 {
 	return Fraction(a.get_numerateur(), a.get_denominateur());
 }
